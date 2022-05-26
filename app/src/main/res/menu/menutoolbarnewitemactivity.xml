@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/backlist"
+        android:icon="@drawable/ic_action_go_back"
+        android:title="Go back"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/additem"
+        android:icon="@drawable/ic_action_add_item_2"
+        android:title="Add item"
+        app:showAsAction="ifRoom" />
+
+</menu>

@@ -5,9 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.Toast
-import android.widget.Toolbar
-import com.google.android.material.appbar.MaterialToolbar
 import com.google.firebase.auth.FirebaseAuth
 
 enum class ProviderType {
@@ -28,7 +25,7 @@ class ListActivity : AppCompatActivity() {
     }
 
     private fun setup(email: String, provider: String) {
-        //Toolbar asignar menu
+        //Toolbar initialization
         val toolbar = findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
 
@@ -47,10 +44,10 @@ class ListActivity : AppCompatActivity() {
     //Toolbar menu items actions
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.cerrarsesion -> {
+            R.id.signout -> {
                 signOut()
             }
-            R.id.nuevoelemento -> {
+            R.id.new_element -> {
                 goNewItem()
             }
         }

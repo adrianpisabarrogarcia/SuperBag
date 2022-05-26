@@ -30,17 +30,14 @@
 
 
                 <androidx.appcompat.widget.Toolbar
-                    android:id="@+id/toolbar"
+                    android:id="@+id/toolbarNewItem"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="?attr/colorPrimary"
                     android:minHeight="?attr/actionBarSize"
                     android:theme="?attr/actionBarTheme"
-                    app:menu="@menu/menutoolbarlistactivity"
-                    app:title="🛍 SuperBag"
-                    app:titleCentered="false"
+                    app:title="🍒 New Item"
                     app:titleTextColor="#FFFFFF" />
-
 
                 <TextView
                     android:id="@+id/textView3"
