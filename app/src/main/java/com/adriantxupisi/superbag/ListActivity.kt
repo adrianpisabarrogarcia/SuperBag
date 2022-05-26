@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.auth.FirebaseAuth
 
 enum class ProviderType {
@@ -28,6 +29,11 @@ class ListActivity : AppCompatActivity() {
         //Toolbar initialization
         val toolbar = findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
+
+
+        //RecyclerView initialization
+        val recyclerView = findViewById<RecyclerView>(R.id.listProductsRecyclerView)
+        recyclerView.adapter = ProductAdapter(this, email, provider)
 
 
         //Print information of the user on the console
