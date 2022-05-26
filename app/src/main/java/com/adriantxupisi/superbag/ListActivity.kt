@@ -33,7 +33,9 @@ class ListActivity : AppCompatActivity() {
 
         //RecyclerView initialization
         val recyclerView = findViewById<RecyclerView>(R.id.listProductsRecyclerView)
-        recyclerView.adapter = ProductAdapter(this, email, provider)
+        //List of Products
+        val products = ArrayList<Product>()
+        recyclerView.adapter = ProductsAdapter(products)
 
 
         //Print information of the user on the console

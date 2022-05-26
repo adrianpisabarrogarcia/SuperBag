@@ -18,18 +18,12 @@ class ProductsAdapter(val products: List<Product>) : RecyclerView.Adapter<Produc
 
     //Devuelve el número de elementos que contiene el recyclerView
     override fun getItemCount(): Int {
-        TODO("Not yet implemented")
+        return products.size
     }
 
     class ViewHolder(view : View) : RecyclerView.ViewHolder(view) {
 
     }
-
-
-
-}
-
-
 
 
 
