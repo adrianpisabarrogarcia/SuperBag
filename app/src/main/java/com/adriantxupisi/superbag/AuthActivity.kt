@@ -23,6 +23,7 @@ class AuthActivity : AppCompatActivity() {
         val bRegister = findViewById<Button>(R.id.buttonRegister)
         val inputEmail = findViewById<EditText>(R.id.inputEmail)
         val inputPassword = findViewById<EditText>(R.id.inputPassword)
+        inputPassword.setText("")
 
         bRegister.setOnClickListener {
             if(inputEmail.text.isNotEmpty() && inputPassword.text.isNotEmpty()) {

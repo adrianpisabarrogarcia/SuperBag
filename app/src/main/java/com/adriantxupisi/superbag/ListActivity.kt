@@ -1,7 +1,12 @@
 package com.adriantxupisi.superbag
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
+import android.widget.Toast
+import android.widget.Toolbar
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.firebase.auth.FirebaseAuth
 
@@ -22,19 +27,48 @@ class ListActivity : AppCompatActivity() {
 
     }
 
+    private fun setup(email: String, provider: String) {
+        //Toolbar asignar menu
+        val toolbar = findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbar)
+        setSupportActionBar(toolbar)
 
-    private fun setup(email: String, password: String) {
-        //Take the material toolbar with a menu
-        val materialToolbar = findViewById<MaterialToolbar>(R.id.mToolbar)
-        materialToolbar.title = "🛍 SuperBag"
 
-        /*
-        logOutButton.setOnClickListener {
-            FirebaseAuth.getInstance().signOut()
-            onBackPressed()
-        }
-         */
-
+        //Print information of the user on the console
+        println("Email: $email")
+        println("Provider: $provider")
     }
+
+    //Toolbar menu
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menutoolbarlistactivity, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    //Toolbar menu items actions
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.cerrarsesion -> {
+                signOut()
+            }
+            R.id.nuevoelemento -> {
+                goNewItem()
+            }
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
+
+    //Sign out
+    private fun signOut() {
+        FirebaseAuth.getInstance().signOut()
+        onBackPressed()
+    }
+
+    //Go to new item activity to register a new item
+    private fun goNewItem() {
+        val newItemActivityIntent = Intent(this, NewItemActivity::class.java)
+        startActivity(newItemActivityIntent)
+    }
+
 
 }
