@@ -8,5 +8,6 @@ data class Product(
     var date: String ?= null,
     var repeat: Boolean ?= null,
     var quantity: Int ?= null,
-    var userEmail: String ?= null
+    var userEmail: String ?= null,
+    var documentId : String ?= null
 )

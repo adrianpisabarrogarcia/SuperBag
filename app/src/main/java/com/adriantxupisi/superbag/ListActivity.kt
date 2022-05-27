@@ -60,7 +60,7 @@ class ListActivity : AppCompatActivity() {
         //List of Products
         products = arrayListOf()
 
-        //Adapter of Productos
+        //Adapter of Productos with event listener of each item
         productsAdapter = ProductsAdapter(products)
 
         //Add products to the list
@@ -86,6 +86,8 @@ class ListActivity : AppCompatActivity() {
                 products.clear()
                 for (document in querySnapshot!!) {
                     val product = document.toObject(Product::class.java)
+                    //document id
+                    product.documentId = document.id
                     products.add(product)
                 }
                 productsAdapter.notifyDataSetChanged()
@@ -127,6 +129,5 @@ class ListActivity : AppCompatActivity() {
         }
         startActivity(newItemActivityIntent)
     }
-
 
 }
