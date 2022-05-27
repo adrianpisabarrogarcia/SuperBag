@@ -188,7 +188,7 @@ class ItemActivity : AppCompatActivity() {
             "quantity", product.quantity
         )
             .addOnSuccessListener {
-                Toast.makeText(this, "Element updated", Toast.LENGTH_SHORT).show()
+                //Toast.makeText(this, "Element updated", Toast.LENGTH_SHORT).show()
                 goToBackActivity()
             }
             .addOnFailureListener {

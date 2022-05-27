@@ -85,10 +85,14 @@ class ListActivity : AppCompatActivity() {
             } else {
                 products.clear()
                 for (document in querySnapshot!!) {
-                    val product = document.toObject(Product::class.java)
-                    //document id
-                    product.documentId = document.id
-                    products.add(product)
+                    //if the userEmail is the same as the one in the document
+                    if (document.getString("userEmail") == userEmail) {
+                        //Add the product to the list
+                        val product = document.toObject(Product::class.java)
+                        //document id
+                        product.documentId = document.id
+                        products.add(product)
+                    }
                 }
                 productsAdapter.notifyDataSetChanged()
             }

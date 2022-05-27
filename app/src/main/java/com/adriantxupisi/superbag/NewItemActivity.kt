@@ -114,7 +114,7 @@ class NewItemActivity : AppCompatActivity() {
         db = FirebaseFirestore.getInstance()
         db.collection("products").add(product)
             .addOnSuccessListener {
-                Toast.makeText(this, "Product added", Toast.LENGTH_SHORT).show()
+                //Toast.makeText(this, "Product added", Toast.LENGTH_SHORT).show()
                 //Go to back activity
                 goToBackActivity()
             }
