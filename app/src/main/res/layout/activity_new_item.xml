@@ -19,7 +19,7 @@
 
             <LinearLayout
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="729dp"
                 android:layout_weight="1"
                 android:orientation="vertical"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -39,13 +39,177 @@
                     app:title="🍒 New Item"
                     app:titleTextColor="#FFFFFF" />
 
-                <TextView
-                    android:id="@+id/textView3"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="TextView"
-                    android:textColor="@color/white"
-                    android:textSize="24sp" />
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/lineName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textViewNameNewItem"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="16dp"
+                            android:text="🥑 Name:"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/editTextNameNewItem"
+                            style="@style/Widget.AppCompat.AutoCompleteTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:backgroundTint="#FAF6F6"
+                            android:ems="10"
+                            android:inputType="textPersonName"
+                            android:shadowColor="#F6F6F6"
+                            android:text="Avocado"
+                            android:textColor="#979595"
+                            android:textColorHighlight="#FFFFFF"
+                            android:textColorHint="#FBF9F9"
+                            android:textStyle="italic"
+                            tools:ignore="TouchTargetSizeCheck" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lineQuantity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textViewQuantityNewItem"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="16dp"
+                            android:text="🔢 Quantity:"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/editTextQuantityNewItem"
+                            style="@style/Widget.AppCompat.AutoCompleteTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:backgroundTint="#FAF6F6"
+                            android:ems="10"
+                            android:inputType="number"
+                            android:shadowColor="#F6F6F6"
+                            android:text="3"
+                            android:textColor="#979595"
+                            android:textColorHighlight="#FFFFFF"
+                            android:textColorHint="#FBF9F9"
+                            android:textStyle="italic"
+                            tools:ignore="TouchTargetSizeCheck" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lineDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textViewDateNewItem"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="16dp"
+                            android:text="📅 Date:"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/editTextDateNewItem"
+                            style="@style/Widget.AppCompat.AutoCompleteTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:backgroundTint="#FAF6F6"
+                            android:ems="10"
+                            android:inputType="date"
+                            android:shadowColor="#F6F6F6"
+                            android:text="2022/05/22"
+                            android:textColor="#979595"
+                            android:textColorHighlight="#FFFFFF"
+                            android:textColorHint="#FBF9F9"
+                            android:textStyle="italic"
+                            tools:ignore="TouchTargetSizeCheck" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lineRepeat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textViewRepeatNewItem"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="16dp"
+                            android:text="🔂 Repeat?:"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+
+                        <CheckBox
+                            android:id="@+id/cheackBoxRepeatNewItem"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:fontFamily="sans-serif"
+                            android:includeFontPadding="false"
+                            android:text="Repeat the item all the weeks"
+                            android:textColor="#ACACAC" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lineDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textViewDescriptionNewItem"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="16dp"
+                            android:text="📝 Description:"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/editTextDescriptionNewItem"
+                            style="@style/Widget.AppCompat.AutoCompleteTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:backgroundTint="#FAF6F6"
+                            android:ems="10"
+                            android:inputType="textPersonName"
+                            android:shadowColor="#F6F6F6"
+                            android:text="Lorem Ipsum..."
+                            android:textColor="#979595"
+                            android:textColorHighlight="#FFFFFF"
+                            android:textColorHint="#FBF9F9"
+                            android:textStyle="italic"
+                            tools:ignore="TouchTargetSizeCheck" />
+                    </LinearLayout>
+
+                </LinearLayout>
 
             </LinearLayout>
 

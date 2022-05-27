@@ -1,9 +1,12 @@
 package com.adriantxupisi.superbag
 
-import com.google.type.Date
+import java.util.*
 
-class Product(val name: String, val description: String, val date: Date, val repeat: Boolean) {
-    override fun toString(): String {
-        return "Product(name='$name', description='$description', date=$date, repeat=$repeat)"
-    }
-}
+data class Product(
+    var name: String? = null,
+    var description: String ?= null,
+    var date: String ?= null,
+    var repeat: Boolean ?= null,
+    var quantity: Int ?= null,
+    var userEmail: String ?= null
+)
