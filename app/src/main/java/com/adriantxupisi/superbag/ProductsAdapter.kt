@@ -32,8 +32,8 @@ class ProductsAdapter(private val products: ArrayList<Product>) : RecyclerView.A
 
         fun bind(product: Product) {
             name.text = product.name.toString()
-            quantity.text = product.quantity.toString()
-            description.text = product.description.toString()
+            quantity.text = "🔢 " + product.quantity.toString()
+            description.text = "📝 " + product.description.toString()
 
             //Añadir un listener al elemento
             itemView.setOnClickListener {

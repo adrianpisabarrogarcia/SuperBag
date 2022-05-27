@@ -92,6 +92,15 @@ class NewItemActivity : AppCompatActivity() {
             Toast.makeText(this, "Please input a correct Date: YYYY-MM-DD", Toast.LENGTH_SHORT).show()
         }
 
+        //Validate the quantity
+        try {
+            //Parse the quantity to int
+            val quantityInt = quantity.toInt()
+        } catch (e: Exception){
+            validation = false
+            Toast.makeText(this, "Please input a correct quantity", Toast.LENGTH_SHORT).show()
+        }
+
 
         if (validation) {
             //Create a product
