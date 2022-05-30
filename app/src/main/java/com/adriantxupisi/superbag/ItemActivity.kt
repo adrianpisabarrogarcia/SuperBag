@@ -169,8 +169,7 @@ class ItemActivity : AppCompatActivity() {
 
         if (validation) {
             //Create a product
-            val product =
-                Product(name, description, dateString, repeat, quantity.toInt(), userEmail)
+            val product = Product(name, description, dateString, repeat, quantity.toInt(), userEmail, documentId)
             updateDB(product)
         }
 
@@ -188,22 +187,12 @@ class ItemActivity : AppCompatActivity() {
             "quantity", product.quantity
         )
             .addOnSuccessListener {
-                //Toast.makeText(this, "Element updated", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Element updated", Toast.LENGTH_SHORT).show()
                 goToBackActivity()
             }
             .addOnFailureListener {
                 Toast.makeText(this, "Error updating element", Toast.LENGTH_SHORT).show()
             }
-
-
-                /*
-            .addOnSuccessListener {
-                Toast.makeText(this, "Product updated", Toast.LENGTH_SHORT).show()
-                goToBackActivity()
-            }
-            .addOnFailureListener {
-                Toast.makeText(this, "Error updating product", Toast.LENGTH_SHORT).show()
-            }*/
     }
 
     //Delete element

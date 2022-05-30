@@ -103,8 +103,11 @@ class NewItemActivity : AppCompatActivity() {
 
 
         if (validation) {
+            //Create a token
+            val token = UUID.randomUUID().toString()
+
             //Create a product
-            val product = Product(name, description, dateString, repeat, quantity.toInt(), userEmail)
+            val product = Product(name, description, dateString, repeat, quantity.toInt(), userEmail, token)
             saveDB(product)
         }
 
@@ -112,7 +115,7 @@ class NewItemActivity : AppCompatActivity() {
 
     private fun saveDB(product: Product) {
         db = FirebaseFirestore.getInstance()
-        db.collection("products").add(product)
+        db.collection("products").document(product.documentId.toString()).set(product)
             .addOnSuccessListener {
                 //Toast.makeText(this, "Product added", Toast.LENGTH_SHORT).show()
                 //Go to back activity
