@@ -1,4 +1,4 @@
-# SuperBag
+# 🛒 SuperBag
 
 SuperBag 🛍️ es una aplicación para Andorid para hacer la compra.    
 Añade a tu cesta 🧺 todo lo que necesitas para comprar en el Super 🛒.
